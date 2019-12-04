@@ -35,5 +35,6 @@ main :: IO ()
 main = do
   putStrLn "Please input size of board."
   boardSize <- getLine
-  putStrLn $ show $ startGame $ read boardSize
+  putStrLn $ drawBoard $ createBoard $ read boardSize
+  --putStrLn $ show $ startGame $ read boardSize
 
