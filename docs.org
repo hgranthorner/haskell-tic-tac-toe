@@ -4,6 +4,14 @@ This application allows you to play Tic Tac Toe on your console. PLEASE use mono
 
 The app is split into four main chunks: Main, Logic, Render and Model. A helper function module exists as well.
 
+The game loop is simple. First, a user indicates the size of the board. Then the loop truly begins:
+1. The board is rendered.
+2. The player chooses which cell to mark.
+3. The game confirms that the cell can be marked, and so marks the cell.
+4. The game checks to see if the game is over.
+5. If no, go back to step 1.
+6. Otherwise, print the winner and exit.
+
 * Main
 
 This module runs the program, and provides the necessary set up to get it going.
@@ -11,7 +19,7 @@ This module runs the program, and provides the necessary set up to get it going.
 * Logic
 
 ** TODO set up logic for winning the game
-** TODO be able to mark the board
+** DONE be able to mark the board
 
 * Render
 
