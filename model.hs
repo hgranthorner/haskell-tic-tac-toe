@@ -14,3 +14,6 @@ data Board = Board { getSize :: Int
 data Game = Game { getBoard :: Board
                  , getTurn :: Player
                  } deriving (Show)
+
+strToPosn :: String -> Position
+strToPosn tup = Position (read tup :: (Int, Int))

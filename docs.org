@@ -21,6 +21,15 @@ This module runs the program, and provides the necessary set up to get it going.
 ** TODO set up logic for winning the game
 ** DONE be able to mark the board
 
+** TODO Win game logic
+A player can win 3 ways:
+1. Horizontally. If a player's mark exists in every cell in a row, the player wins.
+   + In game logic, this means to group the cells by x coordinate. Loop through the list: if any group is filled with a certain mark, that player wins.
+   + If ALL cells contains the same mark, that player wins.
+2. Vertically. If a player's mark exists in every cell in a column, the player wins.
+   + In game logic, this means to check each group of cells with the same y coordinate.
+3. Diagonally. If a player's mark exists in every coordinate (x, x), the player wins.
+
 * Render
 
 This module provides the necessary function (=drawBoard=) to render the current state of the board to the console.

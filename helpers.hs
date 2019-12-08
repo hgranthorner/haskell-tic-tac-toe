@@ -2,6 +2,9 @@
 
 module Helpers where
 
+import Data.Function
+import Data.List
+
 import Model
 
 slice :: Int -> Int -> [a] -> [a]
@@ -24,3 +27,19 @@ swapIn lst index new = first ++ new : last
   where first = slice 0 (index - 1) lst
         last  = slice (index + 1) (length lst) lst
 
+getX :: Mark -> Int
+getX = f . getPosition
+  where f (Position (x, _)) = x
+
+getY :: Mark -> Int
+getY = f . getPosition
+  where f (Position (_, y)) = y
+
+groupRow :: Board -> [[Mark]]
+groupRow = groupBy (\a b -> getX a == getX b) . sortBy (compare `on` getX) . getCurrentState
+
+groupCol :: Board -> [[Mark]]
+groupCol = groupBy (\a b -> getY a == getY b) . sortBy (compare `on` getY) . getCurrentState
+
+allEq :: Eq a => [a] -> Bool
+allEq lst = null $ snd $ span (== head lst) lst
