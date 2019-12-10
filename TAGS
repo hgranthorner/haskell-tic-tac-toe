@@ -1,41 +1,46 @@
 
-./Helpers.hs,177
+./Helpers.hs,244
 sliceslice11,122
 indexFromPosnindexFromPosn14,215
 changePlayerchangePlayer17,322
 createBoardcreateBoard23,453
 swapInswapIn26,598
-groupHgroupH33,913
-getXgetX36,954
+getXgetX31,748
+getYgetY35,820
+groupRowgroupRow39,902
+groupColgroupCol42,1023
+allEqallEq45,1143
 
-./Logic.hs,98
-markBoardmarkBoard8,131
-validateMovevalidateMove20,497
-determineWinnerdetermineWinner28,717
+./Logic.hs,127
+markBoardmarkBoard12,190
+validateMovevalidateMove24,556
+anyWinneranyWinner32,762
+determineWinnerdetermineWinner41,1175
 
-./Model.hs,739
+./Model.hs,802
 PlayerPlayer5,41
-data Player = PlayerXPlayerX5,41
 data Player = PlayerX | PlayerOPlayerO5,41
+data Player = PlayerXPlayerX5,41
 PositionPosition6,92
 data Position = PositionPosition6,92
-MarkTypeMarkType7,147
-data MarkType = X | OO7,147
-data MarkType = XX7,147
-data MarkType = X | O | EmptyEmpty7,147
-MarkMark8,196
-data Mark = MarkMark8,196
-data Mark = Mark { getPositiongetPosition8,196
-                 , getMarkTypegetMarkType9,238
-BoardBoard11,318
-data Board = BoardBoard11,318
-data Board = Board { getSizegetSize11,318
-                   , getCurrentStategetCurrentState12,353
-GameGame14,435
-data Game = GameGame14,435
-data Game = Game { getBoardgetBoard14,435
-                 , getTurngetTurn15,471
-strToPosnstrToPosn19,572
+data Position = Position { getCoordinatesgetCoordinates6,92
+MarkTypeMarkType8,193
+data MarkType = X | OO8,193
+data MarkType = X | O | EmptyEmpty8,193
+data MarkType = XX8,193
+MarkMark9,242
+data Mark = MarkMark9,242
+data Mark = Mark { getPositiongetPosition9,242
+                 , getMarkTypegetMarkType10,284
+BoardBoard12,364
+data Board = BoardBoard12,364
+data Board = Board { getSizegetSize12,364
+                   , getCurrentStategetCurrentState13,399
+GameGame15,481
+data Game = GameGame15,481
+data Game = Game { getBoardgetBoard15,481
+                 , getTurngetTurn16,517
+strToPosnstrToPosn20,618
 
 ./Render.hs,79
 drawBoarddrawBoard7,88
